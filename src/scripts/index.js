@@ -12,33 +12,33 @@ import ('../DATA.json').then(({default: jsonData}) => {
 			<img class="list-item-thumb" src="${data['pictureId']}" alt="${data['name']}" title="${data['name']}" />
 			<div class="city">${data['city']}</div>
 			<div class="list-item-content">
-				<p class="list-item-rating">
+				<label class="list-item-rating">
 					Rating :
 					<a href="#" class="list-item-rating-value">${data['rating']}</a>
-				</p>
-				<h1 class="list-item-title"><a href="#">${data['name']}</a></h1>
+				</label>
+				<h2 class="list-item-title"><a href="#">${data['name']}</a></h2>
 				<div class="list-item-desc">${data['description'].slice(0, 150)}...</div>
 			</div>
 		</div>
 		`;
 	});
-	document.querySelector('#list').innerHTML = dataList;
+	document.querySelector('#list-data').innerHTML = dataList;
 });
 
 //menu
-const menu = document.querySelector('#menu');
-const hero = document.querySelector('.hero');
+const menu = document.querySelector('#btn-menu');
+// const hero = document.querySelector('.jumbroton');
 const main = document.querySelector('main');
-const drawer = document.querySelector('#drawer');
+const drawer = document.querySelector('#nav-menu');
 
 menu.addEventListener('click', function(event) {
 	drawer.classList.toggle('open');
 	event.stopPropagation();
 })
 
-hero.addEventListener('click', function () {
-	drawer.classList.remove('open');
-})
+// hero.addEventListener('click', function () {
+// 	drawer.classList.remove('open');
+// })
 
 main.addEventListener('click', function () {
 	drawer.classList.remove('open');

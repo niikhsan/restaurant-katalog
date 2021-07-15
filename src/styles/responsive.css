@@ -1,44 +1,72 @@
-@media screen and (min-width: 500px) {
-	.menu-mob {
-		display: none;
-	}
+@media screen and (max-width: 600px) {
 
-	.nav-mob {
-		display: none;
-	}
-}
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
 
-@media screen and (max-width: 499px) {
-	.nav-mob {
-		display: none;
-	}
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
 
-	.nav-mob {
+  .nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+	
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
 		z-index: 10;
-		background-color: #cdad0ee8;
-		width: 100%;
-		position: absolute;
-		-webkit-transform: translate(-100%, 0);
-		transform: translate(0, 0);
-		transition: transform 0.3s ease;
+  }
+
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+
+	.nav > .nav-links > a:hover {
+    background-color:rgba(255, 255, 255, 0.986);
+		color: #000;
+  }
+
+  .nav > #btn-menu ~ .nav-links.open {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+	.list-item-thumb {
+		padding: 10px;
+		border-radius: 18px;
 	}
 
-	.nav-mob.open {
-		display: flex;
-		-webkit-transform: translate(0, 0);
-		transform: translate(0, 0);
+	.city {
+		top: 3px;
 	}
 
-	.nav-items-mob {
-		display: list-item;
-		color: #000 !important;
-		width: 100%;
-		text-align: left;
-	}
 }
 
 @media screen and (min-width: 650px) {
-	.list-item-content {
+
+	.list-item {
 		padding: 16px 32px 32px 32px;
 	}
 
@@ -49,36 +77,33 @@
 	.list-item-desc {
 		font-size: 14px;
 	}
+
 }
 
 @media screen and (min-width: 700px) {
-	.nav-mob {
-		display: flex;
-		-webkit-transform: translate(0, 0);
-		transform: translate(0, 0);
-	}
-	.list {
+
+	.list-data {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 10px;
 		grid-row-gap: 16px;
 	}
+
 }
 
 @media screen and (min-width: 900px) {
-	.nav-mob {
-		display: flex;
-		-webkit-transform: translate(0, 0);
-		transform: translate(0, 0);
-	}
-	.list {
+
+	.list-data {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
+
 }
 
 @media screen and (min-width: 1200px) {
+
 	main {
 		max-width: 1200px;
 	}
+
 }
